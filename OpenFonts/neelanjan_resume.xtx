@@ -1,0 +1,246 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Neelanjan}{Manna}{ \urlstyle{same}\href{https://neelanjanmanna.ml}{neelanjanmanna.ml} \\
+\href{mailto:me@neelanjanmanna.ml}{me@neelanjanmanna.ml} | 7504572076 | \href{mailto:neelanjan@chaosnative.com}{neelanjan@chaosnative.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{KIIT University}
+\descript{B.Tech. in Computer Science and Sysems Engineering}
+\location{June 2022}
+\location{Cum. GPA: 9.60 / 10.0}
+\sectionsep
+
+\subsection{GSR English Medium School}
+\descript{Class XII}
+\location{Percentage: 90.13\%}
+\sectionsep
+
+\subsection{Kendriya Vidyalaya Meghahatuburu}
+\descript{Class X}
+\location{Cum. GPA: 10.0 / 10.0}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github://  \href{https://github.com/neelanjan00}{\bf neelanjan00} \\
+LinkedIn://  \href{https://www.linkedin.com/in/neelanjan00}{\bf neelanjan00} \\
+Twitter://  \href{https://twitter.com/NeelanjanManna}{\bf @NeelanjanManna} \\
+Medium://  \href{https://neelanjanmanna.medium.com/}{\bf @neelanjanmanna}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming Languages}
+C \\
+C++ \\
+Go \\
+Python \\
+Javascript \\
+Bash \\
+\sectionsep
+
+\subsection{Tools and Technologies}
+React.js \\
+MongoDB \\
+Express.js \\
+Firebase \\
+Bootstrap \\
+GCP, AWS and VMware \\
+Linux \\
+\sectionsep
+
+\subsection{Technical Domains}
+Data Structures \\
+Algorithms \\
+Full Stack Development \\
+Cloud Computing \\
+Databases \\
+Operating Systems \\
+Microservices \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience} 
+\runsubsection{\href {https://chaosnative.com}{\bf ChaosNative}} 
+\descript{| Software Engineer }
+\descript{May 2021 - Present | Bangalore, India}
+\location {ChaosNative is the main contributor to LitmusChaos, a CNCF
+project for chaos engineering on cloud-native
+infrastructures and applications.}
+\vspace{\topsep}
+\begin{tightemize}
+\item Requirement gathering, development, and documentation of LitmusChaos experiments for GCP and VMWare using Go and Kubernetes.
+\item Development of E2E testing pipelines for GCP and VMware LitmusChaos experiments using GitHub Actions and Go.
+\item Documentation of the LitmusChaos platform architecture for LitmusChaos user documentation.
+\item Development of Litmusd, a platform-generic, remote agent for injecting chaos in OS scoped resources.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{WEC Minds Pvt. Ltd.}
+\descript{| Web Developer Intern }
+\location{Nov 2019 – Feb 2020 | Bhubaneswar, India}
+\location{Developed an online evaluation portal for Startup Odisha, an initiative by the Government of Odisha.}
+\begin{tightemize}
+\item Backend development using Node.js and Express.js to handle different REST API endpoints.
+\item Development of MongoDB schemas and their integration with the backend logic for database CRUD operations.
+\item Development of MongoDB aggregation pipelines for search filtering using parameters.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Personal Website}
+\descript{| \href {https://neelanjanmanna.ml/}{Project} |\href{https://github.com/neelanjan00/Portfolio}{ Source Code}}
+\textbf {A serverless portfolio web application to showcase personal achievements, blogs and projects.}
+\begin{tightemize}
+\item Designed and developed a frontend web application using \textbf{React.js} along with \textbf{Bootstrap} and \textbf{CSS} with \textbf{Javascript}.
+\item Defined and integrated a \textbf{NoSQL} database to store project details in \textbf{Firebase Firestore}, along with \textbf{Firebase Storage} for storing images. 
+\item Performs \textbf{API} call to Medium to get \textbf{XML} data for the blogs, which is then parsed and displayed in the application.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Grid Path Finder}
+\descript{| \href {https://grid-path-finder.web.app/}{Project} |\href{https://github.com/neelanjan00/Grid-Path-Finder}{ Source Code}}
+\textbf {A web application for visualizing the path between a source position and a destination position in a grid.}
+\begin{tightemize}
+\item Designed and developed a web application using \textbf{React.js} and \textbf{Bootstrap} with \textbf{Javascript}, and deployed in \textbf{Firebase}.
+\item Visualizes graph traversal algorithms such as \textbf{BFS}, \textbf{DFS}, and \textbf{Dijkstra Algorithm}.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Go Gap Buffer}
+\descript{| \href {https://pkg.go.dev/github.com/neelanjan00/gap-buffer}{Project} |\href{https://github.com/neelanjan00/gap-buffer}{ Source Code}}
+\textbf {Go implementation of the Gap Buffer, an efficient data structure for insertion and deletion operations clustered near the same location.}
+\begin{tightemize}
+\item Developed an efficient and reusable \textbf{Go} package for the Gap Buffer data structure.
+\item Provides API methods such as \textbf{Insert}, \textbf{Delete}, \textbf{Backspace}, \textbf{SetText}, \textbf{GetText}, \textbf{MoveCursorRight}, and  \textbf{MoveCursorLeft}.
+\end{tightemize}
+\sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     AWARDS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     PUBLICATIONS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
